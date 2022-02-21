@@ -1,5 +1,26 @@
 # chatApplicationPractice
 
+The following information is what I chose to do and why for the purposes of this coding challenge. 
+
+1. set up docker, vscode, and laravel. 
+- Chosen because I was familiar with docker and I didn't want to spend too much time setting up a server.
+- Chosen because I wanted to learn the tools used by giftogram 
+- Chosen because at worst,  I add another tool to the belt for my current Job. 
+
+2. Setting Up laravel was pretty striaghtforward, Added Pusher because I would need real time updates for a chat API
+- made a note to look into the lighter version of this library, which may be better for a mobile app
+
+3. Identified routes and potential changes for the project:
+- General Changes: 
+-- routes that included response bodies did not include response codes, so I would be adding these.
+-- would need to use 403 error code for requests that users don't have access too, such as messages between other users, or pages for non-logged in users. 
+-- Theory: wanted to look into setting up routes to include an index page style set up. (Similar to how ruby on rails sets up there index pages. 
+-- for example, when a user visits messages/ they would recieve a response of all the current chats that user is having. They would then be able to use that information to send a request for a specific chat. 
+
+4. Identified middleware for throttling
+- I had asked about this prior to starting the project, and I was really impressed by how early the laravel documentation included middleware, and included an example of throttling requests. 
+- as this seemed easy to configure, this would be the last thing I would set up. 
+
 
 
 
