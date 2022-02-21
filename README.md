@@ -12,10 +12,10 @@ The following information is what I chose to do and why for the purposes of this
 
 3. Identified routes and potential changes for the project:
 - General Changes: 
--- routes that included response bodies did not include response codes, so I would be adding these.
--- would need to use 403 error code for requests that users don't have access too, such as messages between other users, or pages for non-logged in users. 
--- Theory: wanted to look into setting up routes to include an index page style set up. (Similar to how ruby on rails sets up there index pages. 
--- for example, when a user visits messages/ they would recieve a response of all the current chats that user is having. They would then be able to use that information to send a request for a specific chat. 
+- routes that included response bodies did not include response codes, so I would be adding these.
+- would need to use 403 error code for requests that users don't have access too, such as messages between other users, or pages for non-logged in users. 
+- Theory: wanted to look into setting up routes to include an index page style set up. (Similar to how ruby on rails sets up there index pages. 
+- for example, when a user visits messages/ they would recieve a response of all the current chats that user is having. They would then be able to use that information to send a request for a specific chat. 
 
 4. Identified middleware for throttling
 - I had asked about this prior to starting the project, and I was really impressed by how early the laravel documentation included middleware, and included an example of throttling requests. 
