@@ -14,14 +14,16 @@ class Message implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $message; 
-    public $username;
+    public $chat_message; 
+    public $sender_username;
+    public $reciever_username;
 
     // php 7.2 syntax. 
-    public function __construct($username, $message)
+    public function __construct($sender_username, $reciever_username, $chat_message)
     {
-        $this->message = $message;
-        $this->username = $username; 
+        $this->chat_message = $chat_message;
+        $this->sender_username = $sender_username;
+        $this->reciever_username = $reciever_username;
     }
 
     /**
