@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9d97ac6944b3e5cced4a82d3d6532ce",
+    "content-hash": "83da218ea08f593a04f35fc60635db47",
     "packages": [
         {
             "name": "brick/math",
@@ -2714,7 +2714,7 @@
         },
         {
             "name": "pusher/pusher-php-server",
-            "version": "dev-master",
+            "version": "7.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pusher/pusher-http-php.git",
@@ -2738,7 +2738,6 @@
                 "overtrue/phplint": "^2.3",
                 "phpunit/phpunit": "^8.5|^9.3"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {

@@ -14,11 +14,14 @@ class Message implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    
-    public function __construct(
-        public string $username, 
-        public string $message)
+    public $message; 
+    public $username;
+
+    // php 7.2 syntax. 
+    public function __construct($username, $message)
     {
+        $this->message = $message;
+        $this->username = $username; 
     }
 
     /**
@@ -28,7 +31,7 @@ class Message implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return ['chat']; // channel
+        return new Channel('chat'); // channel
     }
 
     public function broadcastAs(){
