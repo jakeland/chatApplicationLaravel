@@ -18,8 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('send_message', [\App\Http\Controllers\ChatController::class, 'sendMessage']);
 
-Route::post('view_messages', [\App\Http\Controllers\ChatController::class, 'viewMessages']);
-// preemptivly setting up these routes 
+Route::get('view_messages', [\App\Http\Controllers\ChatController::class, 'viewMessages']);
+
+Route::get('list_all_users', [\App\Http\Controllers\UserController::class, 'listAllUsers']);
 
 Route::post('login', [\App\Http\Controllers\UserController::class, 'login']);
 
