@@ -2,6 +2,11 @@
 
 The following information is what I chose to do and why for the purposes of this coding challenge. 
 
+Name: Jake McCarthy
+Time to complete: Rough estimate, 5 hours
+most of that was spent reading documentation to learn about laravel and figuring out little syntax things. 
+Can only provide a rough estimate as project was completed in between work for current employer, including weekends. 
+
 1. set up docker, vscode, and laravel. 
 - Chosen because I was familiar with docker and I didn't want to spend too much time setting up a server.
 - Chosen because I wanted to learn the tools used by giftogram 
@@ -10,16 +15,36 @@ The following information is what I chose to do and why for the purposes of this
 2. Setting Up laravel was pretty striaghtforward, Added Pusher because I would need real time updates for a chat API
 - made a note to look into the lighter version of this library, which may be better for a mobile app
 
-3. Identified routes and potential changes for the project:
+3. set up routes using API responses
+
+4. over-complicated the project:
+- added pusher, thought the project was far more complicated than it was. 
+- after recieving advice to keep it simple, things went smoother. 
+
+
+5. Potential changes for the project
+- Unfinished: 
+- error response was not being correctly set. Chose to move on and see if I could hit this before submission. Estimated time to fix, 1 hour to figure out user registration error, substantially less time after that. 
+
+
 - General Changes: 
-- routes that included response bodies did not include response codes, so I would be adding these.
-- would need to use 403 error code for requests that users don't have access too, such as messages between other users, or pages for non-logged in users. 
+- routes that included response bodies do not include response codes, so I would be adding these.
 - Theory: wanted to look into setting up routes to include an index page style set up. (Similar to how ruby on rails sets up there index pages. 
 - for example, when a user visits messages/ they would recieve a response of all the current chats that user is having. They would then be able to use that information to send a request for a specific chat. 
 
+
+- Adding functionality:
+- sending users messages to a "chat" model, and adding users to that chat model would allow the support of group messaging. 
+- this would also allow us to have relationships that would let users invite users to chat (keeps users from getting messages they don't want)
+- allow users to block each other
+- and can be built out and customized a little more easily. 
+- Included a few concepts in the migrations that were left over from the over complication. 
+
 4. Identified middleware for throttling
 - I had asked about this prior to starting the project, and I was really impressed by how early the laravel documentation included middleware, and included an example of throttling requests. 
-- as this seemed easy to configure, this would be the last thing I would set up. 
+- as this seemed easy to configure, this would be one of the last things I would set up
+
+5. 
 
 
 
