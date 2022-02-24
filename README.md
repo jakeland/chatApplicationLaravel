@@ -28,6 +28,7 @@ Can only provide a rough estimate as project was completed in between work for c
 
 
 - General Changes: 
+- checks for whether or not user who is being sent a message exists
 - routes that included response bodies do not include response codes, so I would be adding these.
 - Theory: wanted to look into setting up routes to include an index page style set up. (Similar to how ruby on rails sets up there index pages. 
 - for example, when a user visits messages/ they would recieve a response of all the current chats that user is having. They would then be able to use that information to send a request for a specific chat. 
