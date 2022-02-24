@@ -39,11 +39,11 @@ class chatController extends Controller
 
     public function viewMessages(Request $request){
         // given a chat ID list all messages, 
-        $current_user = $request->input('sender_userId');
-        $target_user = $request->input('reciever_userId');
+        $currentUser = $request->input('sender_userId');
+        $targetUser = $request->input('reciever_userId');
         
         
-        return response()->json(Message::userChats($current_user, $target_user));
+        return response()->json(Message::userChats($currentUser, $targetUser));
     }
 
 }

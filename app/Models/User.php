@@ -18,8 +18,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'first_name',
-        'last_name'
+        'firstname',
+        'lastname',
         'email',
         'password',
     ];
@@ -42,4 +42,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function scopeAllUsersExcept($query, $userId)
+    {
+        return $query->where('id','<>',$userId)->get();
+
+    }
 }
