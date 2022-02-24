@@ -15,11 +15,13 @@ return new class extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
-            $table->integer('userId'); // user sending the message
-            $table->integer('chatId'); // chat the message is recieving 
+            $table->integer('senderUserId'); // user sending the message
+            $table->integer('recieverUserId'); // chat the message is recieving 
             $table->string('content'); // what was said
             $table->timestamps(); //
-            $table->index(['chatId', 'userId']);
+            $table->index('senderUserId');
+            $table->index('recieverUserId');
+            $table->index(['senderUserId', 'recieverUserId']); // for finding a specific chat faster 
         });
     }
 
